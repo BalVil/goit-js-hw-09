@@ -18,7 +18,7 @@ flatpickr('#datetime-picker', {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    selectedTime = selectedDates[0].getTime();
+    selectedTime = selectedDates[0];
     const currentTime = Date.now();
 
     if (currentTime > selectedTime) {
