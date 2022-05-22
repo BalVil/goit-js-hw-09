@@ -25,7 +25,7 @@ function handleSubmit(evt) {
   const amount = Number(evt.currentTarget.elements.amount.value);
 
   for (let i = 1; i <= amount; i += 1) {
-    createPromise([i], delay)
+    createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
